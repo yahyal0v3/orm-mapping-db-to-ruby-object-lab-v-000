@@ -101,7 +101,7 @@ class Student
       WHERE grade = 10
       LIMIT 1
     SQL
-    
+
     row = DB[:conn].execute(sql)
     self.new_from_db(row)
   end
