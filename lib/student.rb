@@ -94,4 +94,14 @@ class Student
     DB[:conn].execute(sql, x).flatten
   end
 
+  def self.first_student_in_grade_10
+    sql = <<-SQL
+      SELECT name
+      FROM students
+      WHERE grade = 10
+      LIMIT 1
+    SQL
+    DB[:conn].execute(sql).flatten
+  end
+
 end
