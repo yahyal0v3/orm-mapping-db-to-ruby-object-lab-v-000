@@ -34,10 +34,10 @@ class Student
       WHERE name = ?
       LIMIT 1
     SQL
-    binding.pry
+
     DB[:conn].execute(sql, name).collect do |row|
       self.new_from_db(row)
-    end 
+    end
   end
 
   def save
