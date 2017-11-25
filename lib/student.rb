@@ -113,8 +113,9 @@ class Student
       WHERE grade = ?
     SQL
 
-    row = DB[:conn].execute(sql, x).flatten
+    DB[:conn].execute(sql, x).collect do ||
     self.new_from_db(row)
+    end 
   end
 
 end
