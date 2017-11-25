@@ -35,7 +35,7 @@ class Student
       LIMIT 1
     SQL
     binding.pry
-    
+
   end
 
   def save
